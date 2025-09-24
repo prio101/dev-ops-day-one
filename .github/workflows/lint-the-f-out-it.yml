@@ -1,0 +1,23 @@
+name: Lint the f out it
+run-name: Lint the f out it
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Starting the linting process..."
+      - run: npm install
+      - run: npm run lint
+      - run: echo "Linting process completed."
+      - name: Upload ESLint Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: eslint-report
+          path: eslint-report.json
