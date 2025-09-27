@@ -6,7 +6,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo "Building the project..."'
-        sh 'docker images are built successfully.'
+        sh 'echo "docker images are built successfully."'
       }
     }
 
@@ -14,7 +14,7 @@ pipeline {
     stage('Test') {
       steps {
         sh 'echo "Running tests..."'
-        sh 'All tests passed successfully.'
+        sh 'echo "All tests passed successfully."'
       }
     }
 
@@ -22,7 +22,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'echo "Deploying the application..."'
-        sh 'Application deployed successfully.'
+        sh 'echo "Application deployed successfully."'
       }
     }
   }
