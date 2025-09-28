@@ -16,7 +16,7 @@ COPY . /app/
 RUN cd /app && npm install
 RUN npm cache clean --force
 
-ENV PORT=9000
+ENV PORT=8080
 
 EXPOSE $PORT
 
